@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+/*Home Animation*/
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-floating-dots-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  
+  /* El patrón de puntos está aquí */
+  background: radial-gradient(#ffd5bf 15%, transparent 16%);
+  background-size: 20px 20px;
+  opacity: 0.6;
+
+  /* La animación se aplica directamente a este elemento */
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animación de pulsación con brillo */
+@keyframes text-pulse {
+  0%, 100% {
+    color: black;
+    text-shadow: none;
+  }
+  50% {
+    color: #ab3b00; /* Color del texto cuando brilla */
+    text-shadow: 0 0 5px #ab3b00, 0 0 10px #ab3b00;
+  }
+}
+
+.text-pulse {
+  animation: text-pulse 2s ease-in-out infinite;
+}
